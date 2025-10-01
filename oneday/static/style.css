@@ -5,3 +5,155 @@ textarea {
 button[type=submit] {
     margin-top: 10px;
 }
+
+
+
+body {
+  background-color: #f8f9fa; /* 은은한 회색 배경 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 전체 컨테이너 */
+.qna-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px 28px;
+}
+
+/* 제목 */
+.h-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 3px solid #ff7f00;
+  padding-bottom: 10px;
+}
+
+/* 테이블 */
+.qna-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.qna-table th {
+  background: linear-gradient(90deg, #ff7f00, #ff9f40);
+  color: white;
+  font-weight: 500;
+}
+.qna-table tr:nth-child(even) {
+  background-color: #fdf5ef;
+}
+.qna-table tr:hover {
+  background-color: #fff3e0;
+  transition: 0.2s;
+}
+.qna-table td a {
+  text-decoration: none;
+  color: #212529;
+}
+.qna-table td a:hover {
+  text-decoration: underline;
+  color: #ff7f00;
+}
+
+/* 버튼 */
+.btn-orange {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 18px;
+  transition: all 0.2s ease;
+}
+.btn-orange:hover {
+  background-color: #e56f00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(229,111,0,0.3);
+}
+
+/* 페이징 고정 */
+.paging-fixed {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+.paging-fixed .pagination {
+  margin: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 6px 10px;
+}
+.paging-fixed .page-link {
+  color: #ff7f00;
+  border: none;
+}
+.paging-fixed .page-item.active .page-link {
+  background-color: #ff7f00;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.paging-fixed .page-link:hover {
+  background-color: #fff3e0;
+  border-radius: 6px;
+}
+
+
+
+.question-card {
+  border-left: 6px solid #ff7f00;
+  background-color: #fffaf5;
+}
+
+.answer-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.badge-date {
+  font-size: 0.85rem;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+}
+
+.status-done {
+    color: white;
+    background-color: green;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+.status-pending {
+    color: white;
+    background-color: grey;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+.qna-form-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.qna-form-card label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
