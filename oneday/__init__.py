@@ -19,10 +19,17 @@ def create_app():
     from . import models
 
     # 블루 프린트 등록
-    from oneday.views import main_views, question_views, answer_views, course_views
+
+    from oneday.views import main_views, question_views, answer_views, course_views, reservation_views
     app.register_blueprint(main_views.bp)
     app.register_blueprint(question_views.bp)
     app.register_blueprint(answer_views.bp)
     app.register_blueprint(course_views.bp)
+    app.register_blueprint(reservation_views.bp)
+
+    # 필터
+    from .filter import format_datetime
+    app.jinja_env.filters['datetime'] = format_datetime
+
 
     return app
