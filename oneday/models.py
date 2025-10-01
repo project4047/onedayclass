@@ -21,3 +21,13 @@ class Answer(db.Model):
     question = db.relationship(Question, backref=db.backref('answer_set'))
     content = db.Column(db.Text(), nullable=False)
     create_date = db.Column(db.DateTime(), nullable=False)
+
+class Reservation(db.Model):
+    __tablename__ = "reservations"
+
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id", ondelete="CASCADE"), nullable=False)
+    class_name = db.Column(db.String(100), nullable=False)
+    reserved_date = db.Column(db.Date, nullable=False)
+    reserved_time = db.Column(db.String(20), nullable=False)
+    status = db.Column(db.String(20), nullable=False)
