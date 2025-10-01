@@ -16,5 +16,15 @@
                 </li>
             </ul>
         </div>
+            <div class="collapse navbar-collapse" id="mainNav">
+      <!-- 왼쪽 메뉴 (원하면 비워둬도 됨) -->
+      <ul class="navbar-nav me-auto">
+        <!-- 예시: <li class="nav-item"><a class="nav-link" href="{{ url_for('course.workspace') }}">클래스</a></li> -->
+      </ul>
+
+      <!-- 오른쪽 액션 버튼 -->
+      <div class="d-flex">
+        <a href="{{ url_for('course.workspace') }}" class="btn btn-outline-secondary btn-sm">클래스 등록</a>
+      </div>
     </div>
 </nav>

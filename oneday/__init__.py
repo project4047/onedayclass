@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 import config
 
+
 db = SQLAlchemy()
 migrate = Migrate()
 
@@ -18,9 +19,10 @@ def create_app():
     from . import models
 
     # 블루 프린트 등록
-    from oneday.views import main_views, question_views, answer_views
+    from oneday.views import main_views, question_views, answer_views, course_views
     app.register_blueprint(main_views.bp)
     app.register_blueprint(question_views.bp)
     app.register_blueprint(answer_views.bp)
+    app.register_blueprint(course_views.bp)
 
     return app
