@@ -14,7 +14,9 @@ class Question(db.Model):
     create_date = db.Column(db.DateTime(), nullable=False)
     user_id = db.Column(db.Integer(), db.ForeignKey('user.id', ondelete='CASCADE'),
                         nullable=False)
-    user = db.relationship('User', backref=db.backref('question_set'))
+
+    user=db.relationship('User', backref=db.backref('question_set')
+
 
 class Answer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -48,4 +50,3 @@ class Course(db.Model):
 
     def __repr__(self):
         return f"<Course {self.classid}>"
-
